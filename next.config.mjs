@@ -4,9 +4,8 @@ const nextConfig = {
   transpilePackages: [
     'antd',
     '@ant-design',
-    'react-daum-postcode',
-    'react-hook-form',
-    'sweetalert2',
+    '@ant-design/pro-editor',
+
   ],
 };
 
