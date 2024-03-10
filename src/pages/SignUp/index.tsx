@@ -132,7 +132,6 @@ const SettingInfo = () => {
                 다음 단계
               </Button>
             </div>
-            <button className='btn-login'>안녕</button>
           </form>
         )}
         {next && <SettingPW setNext={setNext} data={data} />}

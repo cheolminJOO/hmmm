@@ -12,16 +12,6 @@ const Header = () => {
   return (
     <div onClick={onClickToggle} className='flex justify-end '>
       <ModeToggle />
-      <div>
-        <button
-          className={`${
-            isClicked ? 'bg-purple-500' : 'bg-red-500'
-          } text-cyan-400`}
-          onClick={onClickToggle}
-        >
-          버튼
-        </button>
-      </div>
     </div>
   );
 };
