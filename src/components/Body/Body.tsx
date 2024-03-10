@@ -81,6 +81,7 @@ const Body = () => {
               회원가입
             </Button>
             <Button type='submit'>로그인</Button>
+            <button className='btn-login'>안녕</button>
           </div>
         </div>
       </div>

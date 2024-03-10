@@ -39,7 +39,7 @@ const SettingInfo = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<Person>({
     resolver: zodResolver(SignUpSchema),
     mode: 'onChange',
@@ -120,13 +120,19 @@ const SettingInfo = () => {
             </div>
             <div className='mt-[50px] flex justify-end items-center'>
               <Button
-                className='bg-primary text-primary-foreground'
+                className={`${
+                  isValid
+                    ? 'bg-purple-300 text-blue-900 font-bold'
+                    : 'bg-slate-600 text-white'
+                }`}
+                // className='bg-primary text-primary-foreground'
                 variant='outline'
                 type='submit'
               >
                 다음 단계
               </Button>
             </div>
+            <button className='btn-login'>안녕</button>
           </form>
         )}
         {next && <SettingPW setNext={setNext} data={data} />}

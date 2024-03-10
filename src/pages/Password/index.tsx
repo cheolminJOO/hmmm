@@ -22,7 +22,7 @@ const SettingPW: React.FC<IProps> = ({ setNext, data }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<IPassword>({
     resolver: zodResolver(PasswordSchema),
     mode: 'onChange',
@@ -129,7 +129,12 @@ const SettingPW: React.FC<IProps> = ({ setNext, data }) => {
           >
             이전으로
           </button>
-          <Button type='submit' className='bg-primary text-primary-foreground'>
+          <Button
+            type='submit'
+            className={`${
+              isValid ? 'bg-lime-300 text-teal-700' : 'bg-black text-slate-400'
+            } font-bold`}
+          >
             등록하기
           </Button>
         </div>
